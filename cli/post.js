@@ -25,8 +25,8 @@ module.exports = yargs => {
 			describe: 'Post caption',
 			type: 'string',
 		})
+		.describe('link', 'The pass thru link for a photo post')
 		.option('link', {
-			alias: 'link',
 			describe: 'Post link',
 			type: 'string',
 		})
