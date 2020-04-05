@@ -23,6 +23,9 @@ module.exports = async (params) => {
 	if (params.caption) {
 		post.caption = params.caption;
 	}
+	if (params.link) {
+		post.link = params.link;
+	}
 
 	const tumblr = tumblrJs.createClient({
 		credentials: params.credentials,

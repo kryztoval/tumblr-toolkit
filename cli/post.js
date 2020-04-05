@@ -2,7 +2,7 @@ module.exports = yargs => {
 
 	yargs
 		.describe('b', 'Blog name to post to')
-		.usage('Usage: $0 post -c [file] -b [blog] -m [video|photo] -f filepath [options]')
+		.usage('Usage: $0 post -c [file] -b [blog] -m [video|photo] -f filepath [options] --link [link]')
 		.option('m', {
 			alias: 'media',
 			describe: 'Media type',
@@ -23,6 +23,11 @@ module.exports = yargs => {
 		})
 		.option('caption', {
 			describe: 'Post caption',
+			type: 'string',
+		})
+		.option('link', {
+			alias: 'link',
+			describe: 'Post link',
 			type: 'string',
 		})
 		.option('tags', {
